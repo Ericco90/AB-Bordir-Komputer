@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordir Komputer AB - Jasa Bordir Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-red { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- LOGO AREA -->
+            <a href="#beranda" class="flex items-center space-x-3 group">
+                <!-- GANTI LOGO DI SINI: Ganti src dengan file logo Anda sendiri -->
+                <img src="https://placehold.co/100x100/dc2626/white?text=AB" alt="Logo Bordir Komputer AB" class="h-10 w-auto rounded-lg object-contain transition group-hover:scale-105">
+                <span class="text-xl font-bold tracking-tight text-gray-800 uppercase">Bordir <span class="text-red-600">AB</span></span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wide">
+                <a href="#beranda" class="hover:text-red-600 transition text-gray-600">Beranda</a>
+                <a href="#keunggulan" class="hover:text-red-600 transition text-gray-600">Keunggulan</a>
+                <a href="#layanan" class="hover:text-red-600 transition text-gray-600">Layanan</a>
+                <a href="#video" class="hover:text-red-600 transition text-gray-600">Produksi</a>
+                <a href="#galeri" class="hover:text-red-600 transition text-gray-600">Galeri</a>
+                <a href="#kontak" class="hover:text-red-600 transition text-gray-600">Kontak</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden p-2 text-gray-600" id="menu-btn" aria-label="Menu">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Content -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-6 space-y-4 shadow-xl">
+            <a href="#beranda" class="block font-bold py-2 text-gray-700">Beranda</a>
+            <a href="#keunggulan" class="block font-bold py-2 text-gray-700">Keunggulan</a>
+            <a href="#layanan" class="block font-bold py-2 text-gray-700">Layanan</a>
+            <a href="#video" class="block font-bold py-2 text-gray-700">Produksi</a>
+            <a href="#galeri" class="block font-bold py-2 text-gray-700">Galeri</a>
+            <a href="#kontak" class="block font-bold py-2 text-gray-700">Kontak</a>
+            <a href="https://wa.me/628123456789" class="block bg-red-600 text-white text-center py-3 rounded-xl font-bold">Chat WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section id="beranda" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <div class="inline-flex items-center px-4 py-1.5 bg-red-50 text-red-600 rounded-full text-xs font-bold mb-6 border border-red-100 uppercase tracking-widest">
+                    <i data-lucide="award" class="w-4 h-4 mr-2"></i> Kualitas Bordir No. 1
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-gray-900">
+                    Jasa Bordir Komputer <br><span class="text-red-600">Profesional & Rapi</span>
+                </h1>
+                <p class="text-gray-600 text-lg mb-8 max-w-lg leading-relaxed">
+                    Kami menghadirkan solusi bordir presisi untuk logo instansi, seragam perusahaan, topi komunitas, hingga patch emblem dengan teknologi mesin komputer otomatis tercepat.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/628123456789" target="_blank" class="bg-red-600 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center hover:bg-red-700 transition transform hover:-translate-y-1 shadow-xl shadow-red-200">
+                        <i data-lucide="message-circle" class="mr-2 w-5 h-5 text-white"></i>
+                        Pesan Sekarang via WhatsApp
+                    </a>
+                    <a href="#layanan" class="border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition flex items-center justify-center">
+                        Lihat Katalog Layanan
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-72 h-72 bg-red-100 rounded-full blur-3xl opacity-40"></div>
+                <div class="relative rounded-[2rem] overflow-hidden shadow-2xl transform md:rotate-3 hover:rotate-0 transition duration-700">
+                    <img src="https://images.unsplash.com/photo-1610444583731-9e151d040716?q=80&w=800&auto=format&fit=crop" alt="Mesin Bordir Beraksi" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. KEUNGGULAN USAHA -->
+    <section id="keunggulan" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase">Kenapa Harus Di Bordir AB?</h2>
+                <div class="w-24 h-1.5 bg-red-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 text-center group">
+                    <div class="w-20 h-20 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-8 transition group-hover:bg-red-600 group-hover:text-white group-hover:rotate-6">
+                        <i data-lucide="shield-check" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Hasil Rapi & Presisi</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">Ketajaman detail tinggi berkat teknologi software digitizing terbaru.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 text-center group">
+                    <div class="w-20 h-20 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-8 transition group-hover:bg-red-600 group-hover:text-white group-hover:rotate-6">
+                        <i data-lucide="palette" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Bisa Custom Logo</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">Konsultasi desain gratis untuk hasil yang sesuai dengan identitas Anda.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 text-center group">
+                    <div class="w-20 h-20 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-8 transition group-hover:bg-red-600 group-hover:text-white group-hover:rotate-6">
+                        <i data-lucide="zap" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Pengerjaan Cepat</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">Kami menghargai waktu Anda. Selesai tepat waktu sesuai janji.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 text-center group">
+                    <div class="w-20 h-20 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-8 transition group-hover:bg-red-600 group-hover:text-white group-hover:rotate-6">
+                        <i data-lucide="banknote" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Harga Kompetitif</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm">Kualitas bintang lima dengan harga yang bersahabat di kantong.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PRODUK / LAYANAN -->
+    <section id="layanan" class="py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase">Katalog Layanan</h2>
+            <p class="text-gray-500 mb-16">Media apapun kainnya, bordir AB solusinya</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group bg-gray-50 rounded-[2rem] overflow-hidden hover:bg-white hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-red-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=400&auto=format&fit=crop" alt="Bordir Logo" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-3 text-gray-800">Logo Seragam</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Sangat cocok untuk seragam kantor, sekolah, hingga komunitas motor.</p>
+                    </div>
+                </div>
+                <div class="group bg-gray-50 rounded-[2rem] overflow-hidden hover:bg-white hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-red-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=400&auto=format&fit=crop" alt="Bordir Topi" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-3 text-gray-800">Topi Custom</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Bordir topi satuan atau lusinan dengan teks 3D atau logo detail.</p>
+                    </div>
+                </div>
+                <div class="group bg-gray-50 rounded-[2rem] overflow-hidden hover:bg-white hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-red-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=400&auto=format&fit=crop" alt="Bordir Jaket" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-3 text-gray-800">Jaket & Hoodie</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Bordir punggung kapasitas besar untuk identitas tim atau brand distro.</p>
+                    </div>
+                </div>
+                <div class="group bg-gray-50 rounded-[2rem] overflow-hidden hover:bg-white hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-red-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=400&auto=format&fit=crop" alt="Patch Emblem" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-3 text-gray-800">Patch / Emblem</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Patch bordir lepas pasang dengan perekat velcro atau jahit manual.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROSES PEMESANAN -->
+    <section class="py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-[120px]"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase tracking-wider">3 Langkah Mudah</h2>
+                <p class="text-gray-400">Proses simpel, tidak pakai ribet</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-16 relative">
+                <div class="text-center relative">
+                    <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-8 text-3xl font-black shadow-[0_0_30px_rgba(220,38,38,0.5)]">1</div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-500">Konsultasi Desain</h3>
+                    <p class="text-gray-400 leading-relaxed">Kirim logo Anda via WA. Tim kami akan melakukan digitizing agar terbaca oleh mesin.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-8 text-3xl font-black shadow-[0_0_30px_rgba(220,38,38,0.5)]">2</div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-500">Produksi Otomatis</h3>
+                    <p class="text-gray-400 leading-relaxed">Proses pembordiran menggunakan mesin berkecepatan tinggi dengan benang kualitas ekspor.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-8 text-3xl font-black shadow-[0_0_30px_rgba(220,38,38,0.5)]">3</div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-500">Pengiriman</h3>
+                    <p class="text-gray-400 leading-relaxed">Pengecekan akhir, pengemasan rapi, dan pesanan siap dikirim ke seluruh Indonesia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GALERI VIDEO PRODUKSI -->
+    <section id="video" class="py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-12 uppercase">Intip Proses Kerja Kami</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-gray-100 rounded-[2.5rem] overflow-hidden shadow-xl border-8 border-white group">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?mute=1" title="Proses 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6 text-left">
+                        <h4 class="font-bold text-red-600 uppercase text-xs tracking-widest mb-1">Fase 01</h4>
+                        <p class="font-black text-gray-800">Digitizing Design</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-[2.5rem] overflow-hidden shadow-xl border-8 border-white group">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?mute=1" title="Proses 2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6 text-left">
+                        <h4 class="font-bold text-red-600 uppercase text-xs tracking-widest mb-1">Fase 02</h4>
+                        <p class="font-black text-gray-800">High Speed Stitching</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-[2.5rem] overflow-hidden shadow-xl border-8 border-white group">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?mute=1" title="Proses 3" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6 text-left">
+                        <h4 class="font-bold text-red-600 uppercase text-xs tracking-widest mb-1">Fase 03</h4>
+                        <p class="font-black text-gray-800">Finishing & QC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. GALERI FOTO -->
+    <section id="galeri" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase">Galeri Portofolio</h2>
+                <div class="w-20 h-1.5 bg-red-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-[2rem] shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=500&h=500&fit=crop" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700" alt="Hasil 1">
+                </div>
+                <div class="overflow-hidden rounded-[2rem] shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1574634534894-89d7576c8259?w=500&h=500&fit=crop" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700" alt="Hasil 2">
+                </div>
+                <div class="overflow-hidden rounded-[2rem] shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1613915611249-1ca55a2d4a27?w=500&h=500&fit=crop" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700" alt="Hasil 3">
+                </div>
+                <div class="overflow-hidden rounded-[2rem] shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=500&h=500&fit=crop" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700" alt="Hasil 4">
+                </div>
+                <div class="overflow-hidden rounded-[2rem] shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1618354721010-2c3bf7ac210c?w=500&h=500&fit=crop" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700" alt="Hasil 5">
+                </div>
+                <div class="overflow-hidden rounded-[2rem] shadow-lg group">
+                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&h=500&fit=crop" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700" alt="Hasil 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. TESTIMONI -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black uppercase">Apa Kata Pelanggan?</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-gray-50 p-10 rounded-[2.5rem] relative">
+                    <div class="text-red-600 mb-6 flex">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-gray-600 mb-8 italic leading-relaxed">"Bordiran paling rapi yang pernah saya pesan. Logo kantor jadi terlihat sangat mewah dan profesional. Terima kasih Bordir AB!"</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center font-bold text-white">B</div>
+                        <span class="font-black text-gray-800">Bapak Hendra</span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-10 rounded-[2.5rem] relative">
+                    <div class="text-red-600 mb-6 flex">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-gray-600 mb-8 italic leading-relaxed">"Proses cepat sekali. Butuh patch untuk acara minggu depan, dalam 3 hari sudah sampai di rumah dengan hasil maksimal."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center font-bold text-white">S</div>
+                        <span class="font-black text-gray-800">Siska Putri</span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-10 rounded-[2.5rem] relative">
+                    <div class="text-red-600 mb-6 flex">
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                        <i data-lucide="star" class="fill-current w-5 h-5"></i>
+                    </div>
+                    <p class="text-gray-600 mb-8 italic leading-relaxed">"Sangat puas dengan harga dan pelayanannya. Komunikasi via WA sangat responsif membantu konsultasi desain."</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center font-bold text-white">A</div>
+                        <span class="font-black text-gray-800">Aris Gunawan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA -->
+    <section class="py-24 bg-red-600 text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-8 italic uppercase leading-tight">Siap Membuat Bordir Logo <br>Untuk Identitas Anda?</h2>
+            <p class="text-red-100 mb-12 text-lg max-w-2xl mx-auto">Klik tombol di bawah untuk konsultasi langsung dengan admin kami via WhatsApp. Gratis konsultasi desain!</p>
+            <a href="https://wa.me/628123456789" target="_blank" class="bg-white text-red-600 px-12 py-6 rounded-2xl font-black text-xl hover:bg-gray-100 transition shadow-2xl inline-flex items-center group">
+                <i data-lucide="phone-call" class="mr-3 w-7 h-7 transition group-hover:rotate-12"></i>
+                HUBUNGI KAMI SEKARANG
+            </a>
+        </div>
+    </section>
+
+    <!-- 9. KONTAK & MAP -->
+    <section id="kontak" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl font-black mb-10 uppercase tracking-tight text-gray-900">Lokasi Workshop</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-6 group">
+                            <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-red-600 group-hover:text-white transition-all">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Alamat</h4>
+                                <p class="text-gray-600">Jl. Utama Bordir No. 88, Kota Tekstil, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6 group">
+                            <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-red-600 group-hover:text-white transition-all">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">halo@bordirkomputerab.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6 group">
+                            <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-red-600 group-hover:text-white transition-all">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Jam Operasional</h4>
+                                <p class="text-gray-600">Senin - Sabtu (08:00 - 17:00 WIB)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-gray-50 h-[450px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.5731164!3d-6.9034443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a944a4d95d40a!2sBandung!5e0!3m2!1sid!4v1700000000000!5m2!1sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-50 border-t border-gray-200 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 text-center md:text-left">
+                <!-- LOGO AREA FOOTER -->
+                <div class="flex flex-col items-center md:items-start space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <!-- GANTI LOGO FOOTER DI SINI -->
+                        <img src="https://placehold.co/100x100/dc2626/white?text=AB" alt="Logo Footer" class="h-8 w-auto">
+                        <span class="text-xl font-black uppercase tracking-widest text-gray-800">Bordir <span class="text-red-600">AB</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-xs leading-relaxed">Penyedia jasa bordir komputer profesional dengan kualitas terbaik dan pengerjaan tepat waktu.</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-8 font-bold text-sm uppercase tracking-widest text-gray-600">
+                    <a href="#beranda" class="hover:text-red-600 transition">Beranda</a>
+                    <a href="#keunggulan" class="hover:text-red-600 transition">Keunggulan</a>
+                    <a href="#layanan" class="hover:text-red-600 transition">Layanan</a>
+                    <a href="#kontak" class="hover:text-red-600 transition">Kontak</a>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 hover:text-red-600 hover:border-red-600 transition-all shadow-sm">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-400 hover:text-red-600 hover:border-red-600 transition-all shadow-sm">
+                        <i data-lucide="facebook" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-400 text-xs uppercase tracking-[0.3em] font-bold">
+                &copy; <script>document.write(new Date().getFullYear())</script> Bordir Komputer AB. Seluruh Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Effect for Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-3');
+            } else {
+                nav.classList.add('py-3');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
+
